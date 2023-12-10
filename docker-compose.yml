@@ -2,7 +2,7 @@ version: "3.3"
 services:
   app:
     build: "./app"
-    command: for f in 1d.py 1h.py 1m.py 1min.py 1w.py 2h.py 4h.py 5min.py 8h.py 10min.py 15min.py 30min.py; do python "$f"; done
+    command: bash -c "for f in 1d.py 1h.py 1m.py 1min.py 1w.py 2h.py 4h.py 5min.py 8h.py 10min.py 15min.py 30min.py; do python \"/app/$f\"; done"
     healthcheck:
       interval: 5m
       timeout: 3s
@@ -10,15 +10,15 @@ services:
       - "8000:8000"
     volumes:
       - ./app:/app
-      - 1d.py:/app/1d.py:rw
-      - 1h.py:/app/1h.py:rw
-      - 1m.py:/app/1m.py:rw
-      - 1min.py:/app/1min.py:rw
-      - 1w.py:/app/1w.py:rw
-      - 2h.py:/app/2h.py:rw
-      - 4h.py:/app/4h.py:rw
-      - 5min.py:/app/5min.py:rw
-      - 8h.py:/app/8h.py:rw
-      - 10min.py:/app/10min.py:rw
-      - 15min.py:/app/15min.py:rw
-      - 30min.py:/app/30min.py:rw
+      - ./1d.py:/app/1d.py:rw
+      - ./1h.py:/app/1h.py:rw
+      - ./1m.py:/app/1m.py:rw
+      - ./1min.py:/app/1min.py:rw
+      - ./1w.py:/app/1w.py:rw
+      - ./2h.py:/app/2h.py:rw
+      - ./4h.py:/app/4h.py:rw
+      - ./5min.py:/app/5min.py:rw
+      - ./8h.py:/app/8h.py:rw
+      - ./10min.py:/app/10min.py:rw
+      - ./15min.py:/app/15min.py:rw
+      - ./30min.py:/app/30min.py:rw
