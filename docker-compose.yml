@@ -6,8 +6,6 @@ services:
     healthcheck:
       interval: 5m
       timeout: 3s
-  ports:
-      - 8000:8000
   volumes:
     - 1d.py:/app/1d.py:rw
     - 1h.py:/app/1h.py:rw
