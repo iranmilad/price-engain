@@ -2,7 +2,7 @@ version: "2.2"
 
 services:
   app:
-    build: "./"
+    build: "./app"
     command: for f in 1d.py 1h.py 1m.py 1min.py 1w.py 2h.py 4h.py 5min.py 8h.py 10min.py 15min.py 30min.py; do python "$f"; done
     healthcheck:
       interval: 5m
