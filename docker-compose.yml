@@ -6,18 +6,18 @@ services:
     healthcheck:
       interval: 5m
       timeout: 3s
-ports:
-    - 8000:8000
-    volumes:
-      - 1d.py:/app/1d.py:rw
-      - 1h.py:/app/1h.py:rw
-      - 1m.py:/app/1m.py:rw
-      - 1min.py:/app/1min.py:rw
-      - 1w.py:/app/1w.py:rw
-      - 2h.py:/app/2h.py:rw
-      - 4h.py:/app/4h.py:rw
-      - 5min.py:/app/5min.py:rw
-      - 8h.py:/app/8h.py:rw
-      - 10min.py:/app/10min.py:rw
-      - 15min.py:/app/15min.py:rw
-      - 30min.py:/app/30min.py:rw
+  ports:
+      - 8000:8000
+  volumes:
+    - 1d.py:/app/1d.py:rw
+    - 1h.py:/app/1h.py:rw
+    - 1m.py:/app/1m.py:rw
+    - 1min.py:/app/1min.py:rw
+    - 1w.py:/app/1w.py:rw
+    - 2h.py:/app/2h.py:rw
+    - 4h.py:/app/4h.py:rw
+    - 5min.py:/app/5min.py:rw
+    - 8h.py:/app/8h.py:rw
+    - 10min.py:/app/10min.py:rw
+    - 15min.py:/app/15min.py:rw
+    - 30min.py:/app/30min.py:rw
